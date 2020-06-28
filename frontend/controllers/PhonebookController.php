@@ -31,26 +31,6 @@ class PhonebookController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout', 'signup'],
-                'rules' => [
-                    [
-                        'actions' => ['signup'],
-                        'allow' => true,
-                        'roles' => ['?'],
-                    ],
-                    [
-                        'actions' => ['logout'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                    
-                ],
-
-            ],
-
-            //Доступ в справочник только для авторизованного пользователя
-            [
-                'class' => AccessControl::className(),
                 'only' => ['index'],
                 'rules' => [
                     [
@@ -59,8 +39,9 @@ class PhonebookController extends Controller
                         'roles' => ['@'],
                     ],
                 ],
-                
+
             ],
+
 
             //Доступ к редактированию справочника только для админа
             [

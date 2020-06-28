@@ -25,12 +25,7 @@ class SiteController extends Controller
                 'only' => ['logout', 'signup'],
                 'rules' => [
                     [
-                        'actions' => ['signup'],
-                        'allow' => true,
-                        'roles' => ['?'],
-                    ],
-                    [
-                        'actions' => ['logout'],
+                        'actions' => ['signup', 'logout'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -42,10 +37,10 @@ class SiteController extends Controller
             //Доступ в админку только для админа 
             [
                 'class' => AccessControl::className(),
-                'only' => ['index'],
+                'only' => ['index', 'generate'],
                 'rules' => [
                     [
-                        'actions' => ['index'],
+                        'actions' => ['index', 'generate'],
                         'allow' => true,
                         'roles' => ['admin'],
                     ],
@@ -166,14 +161,5 @@ class SiteController extends Controller
             }
      
     }
-
-    /**
-     * Displays management page.
-     *
-     * @return string
-     */
-    public function actionManagement()
-    {
-        return $this->render('management');
-    }        
+       
 }

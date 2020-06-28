@@ -45,7 +45,6 @@ class SiteController extends Controller
 
             ],
 
-            //Доступ в админку только для админа 
             [
                 'class' => AccessControl::className(),
                 'only' => ['phonebook'],
