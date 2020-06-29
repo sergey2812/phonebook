@@ -10,6 +10,8 @@
 
 * в своей консоли выполнить: git clone {repository} {directoryName}
 * cd {directoryName}
+* в консоли выполнить: composer install
+* в консоли выполнить: php init
 * создайте свою базу данных
 * загрузите созданную базу данными из файла autoaliance.sql, находящегося в корне проекта
 * в файле common\config\main-local.php измените настройки для базы данных
