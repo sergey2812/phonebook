@@ -22,6 +22,8 @@
 
 * в своей консоли выполнить: git clone {repository} {directoryName}
 * cd {directoryName}
+* в консоли выполнить: composer install
+* в консоли выполнить: php init
 * создайте свою базу данных
 * в файле common\config\main-local.php измените настройки для базы данных
 * в консоли выполнить: yii migrate
